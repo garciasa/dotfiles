@@ -7,3 +7,10 @@ keybind = ctrl+down=new_split:down
 keybind = ctrl+left=new_split:left
 keybind = ctrl+right=new_split:right
 
+keybind = ctrl+shift+up=goto_split:up
+keybind = ctrl+shift+down=goto_split:down
+keybind = ctrl+shift+right=goto_split:right
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+tab=goto_split:next
+
+
