@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -32,3 +33,9 @@ vim.g.floaterm_width=0.8
 vim.keymap.set('n', '<leader>t', ':FloatermToggle --height=0.8 --width=0.8<CR>')
 vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
 
+-- Diagnostics
+vim.diagnostic.config({
+  virtual_text = true,
+})
+
+--vim.keymap.set("n", "<Leader>d", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
