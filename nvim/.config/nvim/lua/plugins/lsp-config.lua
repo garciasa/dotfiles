@@ -27,33 +27,33 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
 
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         capabilities = capabilities,
       })
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("ts_ls", {
         capabilities = capabilities,
       })
-      lspconfig.gopls.setup({
+      vim.lsp.config("gopls",{
         capabilities = capabilities,
       })
-      lspconfig.astro.setup({
+      vim.lsp.config("astro",{
         capabilities = capabilities,
       })
-      lspconfig.emmet_ls.setup({
+      vim.lsp.config("emmet_ls",{
         capabilities = capabilities,
       })
-      lspconfig.tailwindcss.setup({
+      vim.lsp.config("tailwindcss",{
         capabilities = capabilities,
         filetypes = { "templ", "astro", "javacript", "typescript", "react" },
         init_options = { userLanguages = { templ = "html"} },
       })
-      lspconfig.html.setup({
+      vim.lsp.config("html",{
         capabilities = capabilities,
         filetypes = { "html", "templ" },
       })
-      lspconfig.templ.setup({
+      vim.lsp.config("templ",{
         capabilities = capabilities,
       })
 
