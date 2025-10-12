@@ -35,7 +35,8 @@ vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
 
 -- Diagnostics
 vim.diagnostic.config({
-  virtual_text = true,
+  --virtual_text = true,
+  virtual_lines = true
 })
 
 --vim.keymap.set("n", "<Leader>d", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
