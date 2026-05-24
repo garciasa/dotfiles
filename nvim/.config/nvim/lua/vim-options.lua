@@ -36,7 +36,12 @@ vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
 -- Diagnostics
 vim.diagnostic.config({
   --virtual_text = true,
-  virtual_lines = true
+  --virtual_lines = true
+  severity_sort = true,
+  update_in_insert = false,
+  float = { source = true },
+  jump = { float = true },
+
 })
 
---vim.keymap.set("n", "<Leader>d", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
+vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, { desc = "Show diagnostics"})

@@ -2,6 +2,8 @@ general.import = [ "~/.config/theme/alacritty.toml" ]
 
 [env]
 TERM = "xterm-256color"
+[shell]
+program = "tmux"
 
 [font]
 #normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
