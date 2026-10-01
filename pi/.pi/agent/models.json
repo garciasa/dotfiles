@@ -1,0 +1,16 @@
+{
+  "providers": {
+    "llama-cpp": {
+      "baseUrl": "http://192.168.10.192:8080/v1",
+      "api": "openai-completions",
+      "apiKey": "none",
+      "models": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Local qwen3.8-27b",
+          "contextWindow": 150000
+        }
+      ]
+    }
+  }
+}

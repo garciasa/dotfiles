@@ -34,13 +34,16 @@ vim.keymap.set('n', '<leader>t', ':FloatermToggle --height=0.8 --width=0.8<CR>')
 vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
 
 -- Diagnostics
+local function show_float(_, bufnr)
+  vim.diagnostic.open_float({ bufnr = bufnr, scope = 'cursor', focus = false })
+end 
 vim.diagnostic.config({
   --virtual_text = true,
   --virtual_lines = true
   severity_sort = true,
   update_in_insert = false,
   float = { source = true },
-  jump = { float = true },
+  jump = { on_jump = show_float },
 
 })
 
