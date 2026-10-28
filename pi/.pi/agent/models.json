@@ -1,19 +1,19 @@
 {
   "providers": {
     "llama-cpp": {
-      "baseUrl": "http://100.64.0.1:8080/v1",
+      "baseUrl": "http://100.64.0.3:4000/v1",
       "api": "openai-completions",
-      "apiKey": "none",
+      "apiKey": "",
       "models": [
         {
           "id": "local-low",
           "name": "local-low",
-          "contextWindow": 250000 
+          "contextWindow": 256000 
         },
         {
           "id": "local-high",
           "name": "local-high",
-          "contextWindow": 250000 
+          "contextWindow": 256000 
         }
       ]
     }
